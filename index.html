@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALC-OIS: A Smart Software Recipe Quantifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, main {
+            margin-bottom: 20px;
+        }
+        .button {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        .food-container img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .food-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CALC-OIS: A Smart Software Recipe Quantifier</h1>
+        <p>In today’s fast-paced world, convenience and taste are essential in the food industry. CALC-IOS: A Smart Software Recipe Quantifier is designed for restaurants to manage menus efficiently by accurately calculating ingredient measurements based on servings. This tool ensures consistent food quality, reduces waste, and improves financial performance, targeting fast-food restaurants with popular items like fries, hotdog sandwiches, carbonara, and shakes.</p>
+    </header>
+    <main>
+        <h2>Choose a Dish</h2>
+        <div class="food-container">
+            <img src="https://img.apmcdn.org/4b2716626c9ff3f6e5dfebe520eb592c33cf1e7b/uncropped/941f50-splendid-table-french-fries.jpg" alt="Fries">
+            <button class="button" onclick="toggleIngredients('fries')">Fries</button>
+        </div>
+        <div id="fries" class="hidden">
+            <h3>Fries</h3>
+            <p><b>Potato:</b> 30 grams</p>
+            <p><b>Salt:</b> 1/8 teaspoon</p>
+            <p><b>Pepper:</b> 1/8 teaspoon</p>
+            <p><b>Serving:</b> 1</p>
+        </div>
+
+        <div class="food-container">
+            <img src="https://images.eatsmarter.com/sites/default/files/styles/920x690/public/chicken-cutlet-sandwich-american-style-532124.jpg" alt="Hotdog Sandwich">
+            <button class="button" onclick="toggleIngredients('hotdog')">Chicken Hotdog Sandwich</button>
+        </div>
+        <div id="hotdog" class="hidden">
+            <h3>Chicken Hotdog Sandwich</h3>
+            <p><b>Hotdog Bun:</b> 57 grams</p>
+            <p><b>Cheddar Cheese:</b> 45 grams</p>
+            <p><b>Mayonnaise:</b> To taste</p>
+            <p><b>Ketchup:</b> 2 teaspoons</p>
+        </div>
+
+        <div class="food-container">
+            <img src="https://fthmb.tqn.com/AmtBki2yVYtxFyDoH6PpU6-RYag=/3888x2592/filters:fill(auto,1)/italian-food--pasta-alla-carbonara-111648900-5a4fd617ec2f640037f8cf3d.jpg" alt="Carbonara">
+            <button class="button" onclick="toggleIngredients('carbonara')">Carbonara</button>
+        </div>
+        <div id="carbonara" class="hidden">
+            <h3>Carbonara</h3>
+            <p><b>Pasta Spaghetti:</b> 300 grams</p>
+            <p><b>Bacon:</b> 12 strips</p>
+            <p><b>Butter:</b> 1 tablespoon</p>
+            <p><b>Garlic:</b> 2 cloves</p>
+            <p><b>Enoki Mushroom:</b> 2 pcs</p>
+            <p><b>All-Purpose Flour:</b> ¼ cup</p>
+            <p><b>Knorr Cream of Mushroom:</b> 68 grams</p>
+            <p><b>All-Purpose Cream:</b> 1 cup</p>
+            <p><b>Salt:</b> 1/8 teaspoon</p>
+            <p><b>Pepper:</b> 1/8 teaspoon</p>
+            <p><b>Parmesan Cheese:</b> ½ cup</p>
+        </div>
+
+        <div class="food-container">
+            <img src="https://lovingitvegan.com/wp-content/uploads/2016/08/Watermelon-Smoothie-6.jpg" alt="Watermelon Shake">
+            <button class="button" onclick="toggleIngredients('watermelon')">Watermelon Shake</button>
+        </div>
+        <div id="watermelon" class="hidden">
+            <h3>Watermelon Shake</h3>
+            <p><b>Iced Watermelon:</b> 1 ½ cups</p>
+            <p><b>Fresh Milk:</b> 2 ¼ cups</p>
+            <p><b>White Sugar:</b> 2 teaspoons</p>
+        </div>
+    </main>
+    <script>
+        function toggleIngredients(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
